@@ -14,11 +14,15 @@
 
 #include <godot_cpp/classes/translation_server.hpp>
 
+Ref<TranslationDomain> limbo_ai_domain;
+
 String TTR(const String &p_text, const String &p_context) {
+	if (limbo_ai_domain.is_valid()) {
+        return limbo_ai_domain->translate(p_text, p_context);
+    }
 	if (TranslationServer::get_singleton()) {
 		return TranslationServer::get_singleton()->translate(p_text, p_context);
 	}
-
 	return p_text;
 }
 

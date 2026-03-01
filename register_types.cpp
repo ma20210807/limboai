@@ -125,6 +125,12 @@
 #include <godot_cpp/classes/engine.hpp>
 #include <godot_cpp/core/class_db.hpp>
 #include <godot_cpp/core/memory.hpp>
+#include <godot_cpp/classes/ref.hpp>
+#include <godot_cpp/classes/translation_server.hpp>
+#include <godot_cpp/classes/translation.hpp>
+#include <godot_cpp/classes/resource_loader.hpp>
+#include <godot_cpp/classes/dir_access.hpp>
+#include "compat/translation.h"
 using namespace godot;
 #endif // LIMBOAI_GDEXTENSION
 
@@ -252,6 +258,30 @@ void initialize_limboai_module(ModuleInitializationLevel p_level) {
 #ifdef TOOLS_ENABLED
 	if (p_level == MODULE_INITIALIZATION_LEVEL_EDITOR) {
 #ifdef LIMBOAI_GDEXTENSION
+		// translate begin
+		limbo_ai_domain = TranslationServer::get_singleton()->get_or_add_domain("limboai");
+		String translations_dir = "res://addons/limboai/translations/";
+		Ref<DirAccess> dir = DirAccess::open(translations_dir);
+		if (dir.is_null()) {
+			ERR_PRINT("Cannot open translations directory: " + translations_dir);
+			return;
+		}
+		dir->list_dir_begin();
+		String file_name = dir->get_next();
+		while (!file_name.is_empty()) {
+			if (file_name.ends_with(".po")) {
+				String path = translations_dir + file_name;
+				Ref<Translation> trans = ResourceLoader::get_singleton()->load(path, "Translation");
+				if (trans.is_valid()) {
+					limbo_ai_domain->add_translation(trans);
+				} else {
+					ERR_PRINT("Failed to load translation: " + path);
+				}
+			}
+			file_name = dir->get_next();
+		}
+		// translate end
+		dir->list_dir_end();
 		GDREGISTER_INTERNAL_CLASS(TaskTree);
 		GDREGISTER_INTERNAL_CLASS(TaskButton);
 		GDREGISTER_INTERNAL_CLASS(TaskPaletteSection);

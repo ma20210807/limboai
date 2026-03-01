@@ -17,7 +17,11 @@
 
 #ifdef LIMBOAI_GDEXTENSION
 #include <godot_cpp/variant/string.hpp>
+#include <godot_cpp/classes/ref.hpp>
+#include <godot_cpp/classes/translation_domain.hpp>
+
 using namespace godot;
+extern Ref<TranslationDomain> limbo_ai_domain;
 String TTR(const String &p_text, const String &p_context = "");
 #define RTR(m_text) TTR(m_text)
 
