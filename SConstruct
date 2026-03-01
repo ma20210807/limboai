@@ -61,6 +61,7 @@ vars = Variables()
 vars.AddVariables(
     BoolVariable("deploy_manifest", help="Deploy limboai.gdextension into PROJECT/addons/limboai/bin", default=True),
     BoolVariable("deploy_icons", help="Deploy icons into PROJECT/addons/limboai/icons", default=True),
+    BoolVariable("deploy_translations", help="Deploy translations into PROJECT/addons/limboai/translations", default=True),
 )
 env = Environment(tools=["default"], PLATFORM="", variables=vars)
 Help(vars.GenerateHelpText(env))
@@ -68,6 +69,7 @@ Help(vars.GenerateHelpText(env))
 # Read LimboAI-specific variables.
 deploy_manifest = env["deploy_manifest"]
 deploy_icons = env["deploy_icons"]
+deploy_translations = env["deploy_translations"]
 
 # Remove processed variables from ARGUMENTS to avoid godot-cpp warnings.
 for o in vars.options:
@@ -160,3 +162,12 @@ if deploy_manifest:
         Copy("$TARGET", "$SOURCE"),
     )
     Default(cmd_deploy_manifest)
+
+# Deploy translations into PROJECT/addons/limboai/translations.
+if deploy_translations:
+    cmd_deploy_translations = env.Command(
+        project_dir + "/addons/limboai/translations/",
+        "translations/",
+        Copy("$TARGET", "$SOURCE"),
+    )
+    Default(cmd_deploy_translations)

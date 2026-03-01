@@ -1,0 +1,267 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: LimboAI\n"
+"Report-Msgid-Bugs-To: None\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Rename"
+msgstr "重命名"
+
+msgid "Move Up"
+msgstr "上移"
+
+msgid "Move Down"
+msgstr "下移"
+
+msgid "Duplicate"
+msgstr "复制"
+
+msgid "Remove"
+msgstr "删除"
+
+msgid "Cut"
+msgstr "剪切"
+
+msgid "Copy"
+msgstr "复制"
+
+msgid "Paste"
+msgstr "粘贴"
+
+msgid "Paste After Selected"
+msgstr "粘贴到选中项之后"
+
+msgid "New Behavior Tree"
+msgstr "新建行为树"
+
+msgid "Save Behavior Tree"
+msgstr "保存行为树"
+
+msgid "Load Behavior Tree"
+msgstr "加载行为树"
+
+msgid "Open Debugger"
+msgstr "打开调试器"
+
+msgid "Jump to Owner"
+msgstr "跳转到所有者"
+
+msgid "Close Tab"
+msgstr "关闭标签页"
+
+msgid "Find Task"
+msgstr "查找任务"
+
+msgid "Close Search"
+msgstr "关闭搜索"
+
+msgid "Save Scene"
+msgstr "保存场景"
+
+msgid "Save Extracted Tree"
+msgstr "保存提取的树"
+
+msgid "New"
+msgstr "新建"
+
+msgid "Create a new behavior tree."
+msgstr "创建一个新的行为树。"
+
+msgid "Load"
+msgstr "加载"
+
+msgid "Load behavior tree from a resource file."
+msgstr "从资源文件加载行为树。"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Save edited behavior tree to a resource file."
+msgstr "将编辑后的行为树保存到资源文件。"
+
+msgid "New Task"
+msgstr "新建任务"
+
+msgid "Create new task script and edit it."
+msgstr "创建新任务脚本并进行编辑。"
+
+msgid "Misc"
+msgstr "其他"
+
+msgid "v"
+msgstr "v"
+
+msgid "Click to copy."
+msgstr "点击复制。"
+
+msgid "Search tree"
+msgstr "搜索树"
+
+msgid "Create a new or load an existing behavior tree."
+msgstr "创建新行为树或加载现有的行为树。"
+
+msgid "Show filters"
+msgstr "显示筛选器"
+
+msgid "Filter tasks"
+msgstr "筛选任务"
+
+msgid "Refresh tasks"
+msgstr "刷新任务"
+
+msgid "★ Favorites"
+msgstr "★ 收藏"
+
+msgid "Type"
+msgstr "类型"
+
+msgid "All"
+msgstr "全部"
+
+msgid "Show tasks of all types"
+msgstr "显示所有类型的任务"
+
+msgid "Core"
+msgstr "核心"
+
+msgid "Show only core tasks"
+msgstr "仅显示核心任务"
+
+msgid "User"
+msgstr "用户"
+
+msgid "Show only user-implemented tasks (aka scripts)"
+msgstr "仅显示用户实现的任务（即脚本）"
+
+msgid "Categories"
+msgstr "分类"
+
+msgid "Show tasks of all categories"
+msgstr "显示所有分类的任务"
+
+msgid "Include"
+msgstr "包含"
+
+msgid "Show tasks from selected categories"
+msgstr "显示选中分类的任务"
+
+msgid "Exclude"
+msgstr "排除"
+
+msgid "Don't show tasks from selected categories"
+msgstr "不显示选中分类的任务"
+
+msgid "Select all categories"
+msgstr "全选分类"
+
+msgid "Deselect all categories"
+msgstr "取消全选分类"
+
+msgid "Behavior Tree Editor"
+msgstr "行为树编辑器"
+
+msgid "Choose New Type"
+msgstr "选择新类型"
+
+msgid "Weight"
+msgstr "权重"
+
+msgid "Edit weight"
+msgstr "编辑权重"
+
+msgid "Percent"
+msgstr "百分比"
+
+msgid "Edit percent"
+msgstr "编辑百分比"
+
+msgid "The following BehaviorTree resources are newer on disk."
+msgstr "以下行为树资源在磁盘上较新。"
+
+msgid "What action should be taken?"
+msgstr "应采取什么操作？"
+
+msgid "Reload"
+msgstr "重新加载"
+
+msgid "Resave"
+msgstr "重新保存"
+
+msgid "Filter"
+msgstr "筛选"
+
+msgid "LimboAI Debugger"
+msgstr "LimboAI 调试器"
+
+msgid "%s - Godot Engine"
+msgstr "%s - Godot 引擎"
+
+msgid "Inactive"
+msgstr "未激活"
+
+msgid "Debugged BehaviorTree resource."
+msgstr "被调试的行为树资源。"
+
+msgid "Click to open."
+msgstr "点击打开。"
+
+msgid "Update Interval:"
+msgstr "更新间隔："
+
+msgid "Filter Players"
+msgstr "筛选玩家"
+
+msgid "Make this panel floating."
+msgstr "使此面板浮动。"
+
+msgid "Right click to open the screen selector."
+msgstr "右键点击打开屏幕选择器。"
+
+msgid "Select Screen"
+msgstr "选择屏幕"
+
+msgid "Make the LimboAI Debugger floating."
+msgstr "使 LimboAI 调试器浮动。"
+
+msgid "Run project to start debugging."
+msgstr "运行项目以开始调试。"
+
+msgid "Manage Blackboard Plan"
+msgstr "管理黑板方案"
+
+msgid "Add variable"
+msgstr "添加变量"
+
+msgid "Copy"
+msgstr "复制"
+
+msgid "Paste"
+msgstr "粘贴"
+
+msgid "Remove"
+msgstr "移除"
+
+msgid "NodePath Prefetching"
+msgstr "节点路径预取"
+
+msgid "If checked, NodePath variables will be prefetched on Blackboard initialization."
+msgstr "若勾选，则在黑板初始化时预取节点路径变量。"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Type"
+msgstr "类型"
+
+msgid "Hint"
+msgstr "提示"
+
+msgid "Hint string"
+msgstr "提示字符串"
+
+msgid "Composite should have at least one child task."
+msgstr "组合任务至少应包含一个子任务。"
